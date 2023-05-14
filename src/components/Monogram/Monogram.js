@@ -1,32 +1,37 @@
-import { forwardRef, useId } from 'react';
-import { classes } from 'utils/style';
-import styles from './Monogram.module.css';
+import { forwardRef, useId } from "react";
+import { classes } from "utils/style";
+import styles from "./Monogram.module.css";
 
-export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => {
-  const id = useId();
-  const clipId = `${id}monogram-clip`;
+export const Monogram = forwardRef(
+  ({ highlight, className, ...props }, ref) => {
+    const id = useId();
+    const clipId = `${id}monogram-clip`;
 
-  return (
-    <svg
-      aria-hidden
-      className={classes(styles.monogram, className)}
-      width="46"
-      height="29"
-      viewBox="0 0 46 29"
-      ref={ref}
-      {...props}
-    >
-      <defs>
-        <clipPath id={clipId}>
-          <path d="M16.525 28.462l7.18-18.35.003-.001 9.72 18.442a.838.838 0 001.524-.093l3.39-8.824a.846.846 0 00-.04-.686L30.307 3.605A6.698 6.698 0 0024.367 0h-4.6a.84.84 0 00-.74 1.23l3.63 6.887-3.655 9.15-7.12-13.662A6.698 6.698 0 005.942 0h-4.6a.842.842 0 00-.748 1.23L15 28.554a.839.839 0 001.524-.092zM42.392 8.806a.835.835 0 00.387-.446v.001l2.67-7.23a.838.838 0 00-.785-1.129h-6.578a.837.837 0 00-.736 1.238l3.907 7.226c.22.41.729.56 1.135.34z" />
-        </clipPath>
-      </defs>
-      <rect clipPath={`url(#${clipId})`} width="100%" height="100%" />
-      {highlight && (
-        <g clipPath={`url(#${clipId})`}>
-          <rect className={styles.highlight} width="100%" height="100%" />
-        </g>
-      )}
-    </svg>
-  );
-});
+    return (
+      <svg
+        aria-hidden
+        className={classes(styles.monogram, className)}
+        width="148"
+        height="73"
+        viewBox="0 0 148 73"
+        ref={ref}
+        {...props}
+      >
+        <defs>
+          <clipPath id={clipId}>
+            <path
+              d="M31.5625 72.2727C23.9868 72.2727 17.7443 70.7727 12.8352 67.7727C7.92615 64.7424 4.48675 60.5303 2.51705 55.1364C0.547357 49.7121 0.168569 43.4243 1.38069 36.2727C2.53221 29.1212 4.98675 22.8485 8.74433 17.4546C12.5322 12.0303 17.3807 7.81819 23.2898 4.81818C29.2292 1.78788 35.9868 0.272736 43.5625 0.272736C50.411 0.272736 56.1231 1.51516 60.6989 4.00001C65.3049 6.45455 68.5928 9.9394 70.5625 14.4546C72.5625 18.9394 73.0777 24.2121 72.108 30.2727H48.8352C49.108 26.6364 48.5171 23.8485 47.0625 21.9091C45.6383 19.9697 43.5625 19 40.8352 19C38.5928 19 36.5322 19.6364 34.6534 20.9091C32.8049 22.1515 31.214 24.0455 29.8807 26.5909C28.5777 29.1061 27.6231 32.2727 27.0171 36.0909C26.411 39.9091 26.3352 43.0909 26.7898 45.6364C27.2746 48.1515 28.214 50.0455 29.608 51.3182C31.0322 52.5606 32.8352 53.1818 35.0171 53.1818C36.8958 53.1818 38.6231 52.7576 40.1989 51.9091C41.8049 51.0303 43.1837 49.7576 44.3352 48.0909C45.5171 46.394 46.411 44.3333 47.0171 41.9091H70.2898C69.1383 48.0909 66.8201 53.4546 63.3352 58C59.8504 62.5455 55.411 66.0606 50.0171 68.5455C44.6231 71.0303 38.4716 72.2727 31.5625 72.2727Z"
+              fill="white"
+            />
+          </clipPath>
+        </defs>
+        <rect clipPath={`url(#${clipId})`} width="100%" height="100%" />
+        {highlight && (
+          <g clipPath={`url(#${clipId})`}>
+            <rect className={styles.highlight} width="100%" height="100%" />
+          </g>
+        )}
+      </svg>
+    );
+  }
+);

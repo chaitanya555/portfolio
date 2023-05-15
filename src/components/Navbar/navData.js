@@ -19,14 +19,14 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    label: "Twitter",
-    url: "https://twitter.com/yesitsspaghetti",
-    icon: "twitter",
-  },
-  {
     label: "linkedin",
     url: "https://www.linkedin.com/in/chaitanya-sharma555/",
     icon: "figma",
+  },
+  {
+    label: "Twitter",
+    url: "https://twitter.com/yesitsspaghetti",
+    icon: "twitter",
   },
   {
     label: "Github",

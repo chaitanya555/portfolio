@@ -1,24 +1,24 @@
-import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/gamestack-login.jpg';
-import sliceTextureLarge from 'assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-import sliceTexture from 'assets/slice-app.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
-import { Footer } from 'components/Footer';
-import { Meta } from 'components/Meta';
-import { Intro } from 'layouts/Home/Intro';
-import { Profile } from 'layouts/Home/Profile';
-import { ProjectSummary } from 'layouts/Home/ProjectSummary';
-import { useEffect, useRef, useState } from 'react';
-import styles from './Home.module.css';
+import gamestackTexture2Large from "assets/gamestack-list-large.jpg";
+import gamestackTexture2Placeholder from "assets/gamestack-list-placeholder.jpg";
+import gamestackTexture2 from "assets/gamestack-list.jpg";
+import gamestackTextureLarge from "assets/gamestack-login-large.jpg";
+import gamestackTexturePlaceholder from "assets/gamestack-login-placeholder.jpg";
+import gamestackTexture from "assets/gamestack-login.jpg";
+import sliceTextureLarge from "assets/slice-app-large.jpg";
+import sliceTexturePlaceholder from "assets/slice-app-placeholder.jpg";
+import sliceTexture from "assets/slice-app.jpg";
+import sprTextureLarge from "assets/spr-lesson-builder-dark-large.jpg";
+import sprTexturePlaceholder from "assets/spr-lesson-builder-dark-placeholder.jpg";
+import sprTexture from "assets/spr-lesson-builder-dark.jpg";
+import { Footer } from "components/Footer";
+import { Meta } from "components/Meta";
+import { Intro } from "layouts/Home/Intro";
+import { Profile } from "layouts/Home/Profile";
+import { ProjectSummary } from "layouts/Home/ProjectSummary";
+import { useEffect, useRef, useState } from "react";
+import styles from "./Home.module.css";
 
-const disciplines = ['Designer', 'Artist', 'Web consultant'];
+const disciplines = ["Designer", "Artist", "consultant"];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -34,26 +34,26 @@ export const Home = () => {
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const section = entry.target;
             observer.unobserve(section);
             if (visibleSections.includes(section)) return;
-            setVisibleSections(prevSections => [...prevSections, section]);
+            setVisibleSections((prevSections) => [...prevSections, section]);
           }
         });
       },
-      { rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
     );
 
     const indicatorObserver = new IntersectionObserver(
       ([entry]) => {
         setScrollIndicatorHidden(!entry.isIntersecting);
       },
-      { rootMargin: '-100% 0px 0px 0px' }
+      { rootMargin: "-100% 0px 0px 0px" }
     );
 
-    sections.forEach(section => {
+    sections.forEach((section) => {
       sectionObserver.observe(section.current);
     });
 
@@ -87,8 +87,8 @@ export const Home = () => {
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
-          type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          type: "laptop",
+          alt: "Smart Sparrow lesson builder",
           textures: [
             {
               srcSet: [sprTexture, sprTextureLarge],
@@ -108,8 +108,8 @@ export const Home = () => {
         buttonText="View website"
         buttonLink=""
         model={{
-          type: 'phone',
-          alt: 'App login screen',
+          type: "phone",
+          alt: "App login screen",
           textures: [
             {
               srcSet: [gamestackTexture, gamestackTextureLarge],
@@ -132,8 +132,8 @@ export const Home = () => {
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          type: "laptop",
+          alt: "Annotating a biomedical image in the Slice app",
           textures: [
             {
               srcSet: [sliceTexture, sliceTextureLarge],

@@ -1,36 +1,36 @@
 export const navLinks = [
   {
-    label: 'Projects',
-    pathname: '/#project-1',
+    label: "Projects",
+    pathname: "/#project-1",
   },
   {
-    label: 'Details',
-    pathname: '/#details',
+    label: "Details",
+    pathname: "/#details",
   },
   {
-    label: 'Articles',
-    pathname: '/articles',
+    label: "Articles",
+    pathname: "/articles",
   },
   {
-    label: 'Contact',
-    pathname: '/contact',
+    label: "Contact",
+    pathname: "/contact",
   },
 ];
 
 export const socialLinks = [
   {
-    label: 'Twitter',
-    url: 'https://twitter.com/yesitsspaghetti',
-    icon: 'twitter',
+    label: "Twitter",
+    url: "https://twitter.com/yesitsspaghetti",
+    icon: "twitter",
   },
   {
-    label: 'Figma',
-    url: 'h',
-    icon: 'figma',
+    label: "linkedin",
+    url: "https://www.linkedin.com/in/chaitanya-sharma555/",
+    icon: "figma",
   },
   {
-    label: 'Github',
-    url: 'h',
-    icon: 'github',
+    label: "Github",
+    url: "h",
+    icon: "github",
   },
 ];
